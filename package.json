@@ -30,7 +30,8 @@
     "typecheck": "flow",
     "test": "mocha --compilers js:babel-core/register,css:./test/unit/cssNullCompiler.js --require ./test/unit/testHelper.js --recursive ./test/unit",
     "test:watch": "npm run test -- --watch",
-    "tunnel": "lt --port 3000"
+    "tunnel": "lt --port 3000",
+    "heroku-postbuild": "cross-env NODE_ENV=production webpack -p --config ./config/webpack.config.production.js --progress"
   },
   "devDependencies": {
     "babel-cli": "6.14.0",
