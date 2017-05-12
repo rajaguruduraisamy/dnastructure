@@ -1,0 +1,32 @@
+.dnaSequence {
+  border-radius: 0;
+  border-color: #ABAAAA;
+  border-left: 0;
+  border-right: 0;
+  outline: none;
+  letter-spacing: 0.2rem;
+}
+
+.dnaNotation {
+  border-radius: 0;
+  border-color: #ABAAAA;
+  border-left: 0;
+  border-right: 0;
+  letter-spacing: 0.6rem;
+}
+
+.details {
+
+	padding: 20px 0px;
+	label {
+		display: inline-block;
+		font-weight: 300;
+		margin-right: 10px;
+		width: 10%;
+		text-align: right;
+	}
+	input {
+		display: inline-block;
+		width: 80%;
+	}
+}
