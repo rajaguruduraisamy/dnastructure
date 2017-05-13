@@ -17,13 +17,7 @@ fs.readFile('src/client/assets/index.html', 'utf8', (err, markup) => {
   const $ = cheerio.load(markup);
 
   $('head').append('<link rel="stylesheet" href="/css/app.css">');
-  try {
-  fs.mkdirSync('build');
-  fs.mkdirSync('build/client');
-  } catch(e) {
-    console.log('directory already exisits', e);
-  }
-
+  
   fs.writeFile('build/client/index.html', $.html(),{
                 encoding: 'utf8',
                 flag: 'w'
