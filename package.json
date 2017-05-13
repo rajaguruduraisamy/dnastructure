@@ -17,7 +17,7 @@
   },
   "bugs": "https://github.com/rajaguruduraisamy/dnastructure/issues",
   "scripts": {
-    "clean:build": "rimraf build",
+    "clean:build": "rm -rf build",
     "build:html": "node ./bin/buildHtml.js",
     "prestart": "npm run clean:build",
     "start:dev": "webpack-dashboard -c cyan -- node dev-server.js",
