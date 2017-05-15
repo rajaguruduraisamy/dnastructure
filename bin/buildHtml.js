@@ -23,7 +23,6 @@ fs.readFile('src/client/assets/index.html', 'utf8', (err, markup) => {
                 flag: 'w'
             }, (err) => {
     if (err) {
-      console.log('rajaguru', err);
       return console.error(err);
     }
   });

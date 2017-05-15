@@ -2,6 +2,8 @@
 
 const path = require('path');
 const express = require('express');
+require("./src/server/datastore/setup");
+var structureService = require("./src/server/services/structureService");
 
 const app = express();
 
@@ -17,6 +19,14 @@ app.get('/', function(req, res) {
 
     res.render('index');
 });
+
+app.get('/structure/:id', (req, res) => {
+  // http://mongoosejs.com/docs/api.html#model_Model.findById
+  console.log('getting structure');
+  res.sendFile(path.join(__dirname, './src/client/assets/index.html'));
+});
+
+app.use("/api", structureService);
 
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);

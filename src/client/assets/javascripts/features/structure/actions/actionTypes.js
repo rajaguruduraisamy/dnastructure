@@ -1,0 +1,8 @@
+export const UPDATE_STRUCTURE = 'structure/UPDATE_STRUCTURE';
+export const UPDATE_CUSTOMIZATION = 'structure/UPDATE_CUSTOMIZATION';
+export const FETCH_STRUCTURE = 'structure/FETCH_STRUCTURE';
+export const FETCH_STRUCTURE_SUCCESS = 'structure/FETCH_STRUCTURE_SUCCESS';
+export const CREATE_STRUCTURE = 'structure/CREATE_STRUCTURE';
+export const CREATE_STRUCTURE_SUCCESS = 'structure/CREATE_STRUCTURE_SUCCESS';
+export const SAVE_STRUCTURE = 'structure/SAVE_STRUCTURE';
+export const SAVE_STRUCTURE_SUCCESS = 'structure/SAVE_STRUCTURE_SUCCESS';

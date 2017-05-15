@@ -16,7 +16,7 @@ export default class DnaDetails extends Component {
       sequence: this.props.sequence || '',
       dotNotation: this.props.dotNotation || ''
     };
-}
+  }
 
   componentWillReceiveProps(nextProps) {
     this.setState({

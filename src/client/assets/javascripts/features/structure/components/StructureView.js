@@ -9,6 +9,13 @@ import StructureLayout from './StructureLayout';
   actions: bindActionCreators(structureActions, dispatch)
 }))
 export default class StructureView extends Component {
+
+	componentDidMount() {
+		if (this.props.params._id) {
+			this.props.actions.fetchStructure(this.props.params._id);
+			console.log('In structure view ', this.props);
+		}
+	}
   render() {
     return (
       <div>

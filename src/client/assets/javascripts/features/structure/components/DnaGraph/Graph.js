@@ -237,6 +237,7 @@ export default class Graph extends Component {
     }).attr('r', props.structure.baseSize);
 
     this.force.linkDistance((d) => d.bond === 1 ? props.structure.linkWidth : props.structure.bondWidth);
+    this.force.start();
   }
 
   componentDidMount() {
