@@ -11,8 +11,8 @@ import StructureLayout from './StructureLayout';
 export default class StructureView extends Component {
 
 	componentDidMount() {
-		if (this.props.params._id) {
-			this.props.actions.fetchStructure(this.props.params._id);
+		if (this.props.params.id) {
+			this.props.actions.fetchStructure(this.props.params.id);
 			console.log('In structure view ', this.props);
 		}
 	}
