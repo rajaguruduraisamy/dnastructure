@@ -21,6 +21,12 @@ export default class ColorPicker extends Component {
 
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      color: nextProps.color , label: nextProps.label
+    });
+  }
+
   handleClick = () => {
     this.setState({ displayColorPicker: !this.state.displayColorPicker })
   };
@@ -30,7 +36,6 @@ export default class ColorPicker extends Component {
   };
 
   handleChange = (color) => {
-    console.log('New color is ', color.hex);
     this.setState({ color: color.hex })
     this.props.handleColorChange(color.hex);
   };

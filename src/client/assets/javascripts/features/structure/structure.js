@@ -55,7 +55,7 @@ export default function reducer(state: State = initialState, action: any = {}): 
       }  
     }
     case types.FETCH_STRUCTURE_SUCCESS: {
-      console.log('fetch structure');
+      console.log('fetch structure', action.structure);
       return {...state, ...action.structure};
     }
     case types.CREATE_STRUCTURE_SUCCESS: {

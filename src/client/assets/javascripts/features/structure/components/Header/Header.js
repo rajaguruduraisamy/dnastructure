@@ -22,7 +22,6 @@ export default class Header extends Component {
   handleSubmit(e) {
     this.setState({saving: true});
     if (this.props.structure.id) {
-      console.log('need to update');
       this.props.actions.saveStructure(this.props.structure);
     } else  {
       this.props.actions.createStructure(this.props.structure);

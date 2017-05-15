@@ -11,24 +11,34 @@ export default class DnaCustomization extends Component {
 
   constructor(props, context) {
     super(props, context);
-    console.log('props are ', props);
     this.state = {
       colorA: this.props.structure.colorA || '#000',
       colorG: this.props.structure.colorG || '#000',
       colorC: this.props.structure.colorC || '#000',
       colorT: this.props.structure.colorT || '#000',
-      baseSize: this.props.baseSize|| 10,
-      linkWidth: this.props.linkWidth || 30,
-      bondWidth: this.props.bondWidth || 50,
+      baseSize: this.props.structure.baseSize || 10,
+      linkWidth: this.props.structure.linkWidth || 30,
+      bondWidth: this.props.structure.bondWidth || 50,
       //bases : this.props.structure.bases || []
     };
 
   }
 
   handleChangeComplete(type, val) {
-    //this.state.bases.filter((base) => (base.type === type));
     this.setState({ [type]: val });
     this.props.actions.updateCustomization(type, val);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      colorA: nextProps.structure.colorA,
+      colorG: nextProps.structure.colorG,
+      colorC: nextProps.structure.colorC,
+      colorT: nextProps.structure.colorT,
+      baseSize: nextProps.structure.baseSize,
+      linkWidth: nextProps.structure.linkWidth,
+      bondWidth: nextProps.structure.bondWidth
+    });
   }
 
   render() {

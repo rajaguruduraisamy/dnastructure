@@ -24,9 +24,17 @@ export default class InputNumeric extends Component {
 
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      min: nextProps.min,
+      max: nextProps.max,
+      val: nextProps.val,
+      label: nextProps.label
+    });
+  }
+
   handleChange(val)  {
-  	console.log('Changing ' , val)
-    this.setState({ val })
+  	this.setState({ val })
     this.props.handleValueChange(val);
   };
 

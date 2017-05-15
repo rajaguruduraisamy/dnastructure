@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 var Promise = require("bluebird");
 
-const DEFAULT_URI = 'mongodb://mongouser1:Madurai123!@ds011800.mlab.com:11800/dnastructure';
+//const DEFAULT_URI = 'mongodb://mongouser1:Madurai123!@ds011800.mlab.com:11800/dnastructure';
+const DEFAULT_URI = 'mongodb://mongouser1:Madurai123!@ds143211.mlab.com:43211/dnastructure';
 
 mongoose.Promise = Promise;
 

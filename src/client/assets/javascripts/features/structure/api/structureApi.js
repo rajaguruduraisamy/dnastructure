@@ -3,6 +3,7 @@ import axios from 'axios';
 export default class StructureApi {
 
   static getStructure(id) {
+    
     const request = axios.get(`/api/structure/${id}`);
 
     return request.then(response => {
@@ -18,6 +19,7 @@ export default class StructureApi {
       method: 'put',
       data: structure,
       url: `/api/structure/${structure.id}`,
+      header: {'Content-Type': 'application/json'}
     });
 
     return request.then(response => {
@@ -28,13 +30,13 @@ export default class StructureApi {
   }
 
   static createStructure(structure) {
+    
     const request = axios({
       method: 'post',
       data: structure,
       url: '/api/structure',
+      header: {'Content-Type': 'application/json'}
     });
-
-    //return request;
 
     return request.then(response => {
       console.log('got response')
@@ -45,6 +47,7 @@ export default class StructureApi {
   }
 
   static deleteStructure(structure) {
+    
     const request = axios({
       method: 'delete',
       url: `/api/structure/${structure.id}`,
