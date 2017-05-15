@@ -4,8 +4,10 @@ import thunk from 'redux-thunk';
 
 import rootReducer from '../reducer';
 
+const middlewares = [thunk, promiseMiddleware];
+
 const enhancer = compose(
-  applyMiddleware(promiseMiddleware)
+  applyMiddleware(...middlewares)
 )(createStore);
 
 export default function configureStore(initialState) {
